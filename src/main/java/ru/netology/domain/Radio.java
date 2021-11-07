@@ -38,7 +38,7 @@ public void setCurrentVolumeMore (int currentVolume) {
 public int getCurrentVolume () {
         return currentVolume;
 }
-public void increaseVolume () {
+public void setIncreaseVolume (int currentVolume) {
         if (currentVolume <10) {
             this.currentVolume = currentVolume +1;
         }

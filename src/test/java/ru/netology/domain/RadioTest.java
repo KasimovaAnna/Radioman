@@ -75,8 +75,7 @@ public class RadioTest {
     @Test
     public void shouldVolumeIncreaseOn4To5() {
         Radio radio = new Radio();
-        radio.setCurrentVolumeMore(4);
-        radio.increaseVolume();
+        radio.setIncreaseVolume(4);
         int expected = 5;
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
