@@ -30,8 +30,31 @@ public class Radio {
     public void setCurrentRadioStationSwitch (int currentRadioStation) {
         this.currentRadioStation = currentRadioStation;
     }
+public void setCurrentVolumeMore (int currentVolume) {
+        if (currentVolume >10) {
+            this.currentVolume = 10;
+        }
+}
+public int getCurrentVolume () {
+        return currentVolume;
+}
+public void increaseVolume () {
+        if (currentVolume <10) {
+            this.currentVolume = currentVolume +1;
+        }
 
+}
+public void setCurrentVolumeDown0 (int currentVolume){
+        if (currentVolume <0) {
+            this.currentVolume = 0;
+        }
+}
 
+    public void setSlowCurrentVolume(int currentVolume) {
+        if (currentVolume >0) {
+            this.currentVolume = currentVolume -1;
+        }
+    }
 }
 
 

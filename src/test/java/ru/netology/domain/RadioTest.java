@@ -42,6 +42,7 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldRadioStationReducerInPeriod() {
         Radio radio = new Radio();
@@ -51,6 +52,7 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldRadioStationReducerMore9() {
         Radio radio = new Radio();
@@ -60,12 +62,55 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
     }
+
     @Test
     public void shouldRadioStationSwitch() {
         Radio radio = new Radio();
         radio.setCurrentRadioStationSwitch(6);
         int expected = 6;
         int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldVolumeIncreaseOn4To5() {
+        Radio radio = new Radio();
+        radio.setCurrentVolumeMore(4);
+        radio.increaseVolume();
+        int expected = 5;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldVolumeIncreaseMore() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolumeMore(12);
+
+        int expected = 10;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldVolumeDown0() {
+        Radio radio = new Radio();
+
+        radio.setCurrentVolumeDown0(-1);
+
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldVolumeDownOn7To6() {
+        Radio radio = new Radio();
+
+        radio.setSlowCurrentVolume(7);
+        int expected = 6;
+        int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
     }
 }
