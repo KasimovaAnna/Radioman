@@ -9,7 +9,7 @@ public class RadioTest {
     @Test
     public void shouldRadioStationUpFrom2To3() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(2);
+        radio.setIncreaseCurrentRadioStation(2);
         int expected = 3;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
@@ -18,7 +18,7 @@ public class RadioTest {
     @Test
     public void shouldRadioStationMore9() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(100);
+        radio.setIncreaseCurrentRadioStation(100);
         int expected = 0;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
@@ -27,7 +27,7 @@ public class RadioTest {
     @Test
     public void shouldRadioStationBelow0() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(-1);
+        radio.setIncreaseCurrentRadioStation(-1);
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
@@ -36,7 +36,7 @@ public class RadioTest {
     @Test
     public void shouldRadioStationReducer0() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(0);
+        radio.setIncreaseCurrentRadioStation(0);
         radio.slowRadioStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
@@ -46,7 +46,7 @@ public class RadioTest {
     @Test
     public void shouldRadioStationReducerInPeriod() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(8);
+        radio.setIncreaseCurrentRadioStation(8);
         radio.slowRadioStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
@@ -56,7 +56,7 @@ public class RadioTest {
     @Test
     public void shouldRadioStationReducerMore9() {
         Radio radio = new Radio();
-        radio.setCurrentRadioStation(75);
+        radio.setIncreaseCurrentRadioStation(75);
         radio.slowRadioStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
