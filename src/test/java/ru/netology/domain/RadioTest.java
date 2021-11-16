@@ -37,7 +37,7 @@ public class RadioTest {
     public void shouldRadioStationReducer0() {
         Radio radio = new Radio();
         radio.setIncreaseCurrentRadioStation(0);
-        radio.slowRadioStation();
+        radio.setSlowRadioStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
@@ -47,7 +47,7 @@ public class RadioTest {
     public void shouldRadioStationReducerInPeriod() {
         Radio radio = new Radio();
         radio.setIncreaseCurrentRadioStation(8);
-        radio.slowRadioStation();
+        radio.setSlowRadioStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
@@ -57,7 +57,7 @@ public class RadioTest {
     public void shouldRadioStationReducerMore9() {
         Radio radio = new Radio();
         radio.setIncreaseCurrentRadioStation(75);
-        radio.slowRadioStation();
+        radio.setSlowRadioStation();
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         assertEquals(expected, actual);
