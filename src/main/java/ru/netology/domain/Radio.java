@@ -20,7 +20,7 @@ public class Radio {
         }
     }
 
-    public void setSlowRadioStation() {
+    public void setSlowRadioStation(int currentRadioStation) {
         if (currentRadioStation < 9) {
             this.currentRadioStation = currentRadioStation - 1;
         }
