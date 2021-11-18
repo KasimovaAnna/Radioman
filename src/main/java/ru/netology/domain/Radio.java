@@ -2,65 +2,54 @@ package ru.netology.domain;
 
 public class Radio {
     private int currentRadioStation;
-    private int currentVolume;
+    private int quntityRadioStation = 10;
+
+    public Radio() {
+    }
+
+    public Radio(int quntityRadioStation) {
+        this.quntityRadioStation = quntityRadioStation;
+    }
 
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
 
-    public void setIncreaseCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation > 9) {
-            this.currentRadioStation = 0;
-        }
-        if (currentRadioStation < 9) {
-            this.currentRadioStation = currentRadioStation + 1;
-        }
-        if (currentRadioStation < 0) {
-            this.currentRadioStation = 9;
-        }
-    }
-
-    public void setSlowRadioStation(int currentRadioStation) {
-        if (currentRadioStation < 9) {
-            this.currentRadioStation = currentRadioStation - 1;
-        }
-        if (currentRadioStation <= 0) {
-            this.currentRadioStation = 9;
-        }
-    }
-
-    public void setCurrentRadioStationSwitch(int currentRadioStation) {
+    public void setCurrentRadioStation(int currentRadioStation) {
         this.currentRadioStation = currentRadioStation;
     }
 
-    public void setCurrentVolumeMore(int currentVolume) {
-        if (currentVolume > 10) {
-            this.currentVolume = 10;
+    public int getQuntityRadioStation() {
+        return quntityRadioStation;
+    }
+
+    public void setQuntityRadioStation (int quntityRadioStation){
+        if (quntityRadioStation < 1 || quntityRadioStation >10) {
+            this.quntityRadioStation = quntityRadioStation;
+        }
+    }
+    public void setIncreaseCurrentRadioStation (int currentRadioStation) {
+        if (currentRadioStation >9) {
+            this.currentRadioStation = 0;
+        }
+        if (currentRadioStation <9) {
+            this.currentRadioStation = currentRadioStation +1;
+        }
+    }
+    public void setDecreaseCurrentRadioStation (int currentRadioStation) {
+        if (currentRadioStation <0) {
+            this.currentRadioStation = 9;
+        }
+        if (currentRadioStation <=9) {
+            this.currentRadioStation = currentRadioStation -1;
+        }
+    }
+    public void setCurrentRadioStationSwitch (int currentRadioStation) {
+        if (currentRadioStation >0 || currentRadioStation <9) {
+            this.currentRadioStation = currentRadioStation;
         }
     }
 
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public void setIncreaseVolume(int currentVolume) {
-        if (currentVolume < 10) {
-            this.currentVolume = currentVolume + 1;
-        }
-
-    }
-
-    public void setCurrentVolumeDown0(int currentVolume) {
-        if (currentVolume < 0) {
-            this.currentVolume = 0;
-        }
-    }
-
-    public void setSlowCurrentVolume(int currentVolume) {
-        if (currentVolume > 0) {
-            this.currentVolume = currentVolume - 1;
-        }
-    }
 }
 
 
