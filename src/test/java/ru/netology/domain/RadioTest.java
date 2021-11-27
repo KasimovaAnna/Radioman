@@ -105,4 +105,20 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
         assertEquals(expected, actual);
     }
+    @Test
+    public void shouldRadioStationSwitchMoreMax() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStationSwitch(10);
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void shouldRadioStationSwitchDownMin() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStationSwitch(-1);
+        int expected = 0;
+        int actual = radio.getCurrentRadioStation();
+        assertEquals(expected, actual);
+    }
 }
