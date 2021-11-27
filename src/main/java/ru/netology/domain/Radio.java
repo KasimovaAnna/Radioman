@@ -7,7 +7,6 @@ public class Radio {
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
-
     public void setCurrentRadioStation(int currentRadioStation) {
         this.currentRadioStation = currentRadioStation;
     }
