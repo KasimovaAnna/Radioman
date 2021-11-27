@@ -15,17 +15,21 @@ public class Radio {
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
-
     public void setCurrentRadioStation(int currentRadioStation) {
-        this.currentRadioStation = currentRadioStation;
-    }
+            this.currentRadioStation = currentRadioStation;
+        }
+
+
 
     public int getQuntityRadioStation() {
         return quntityRadioStation;
     }
 
     public void setQuntityRadioStation(int quntityRadioStation) {
-        if (quntityRadioStation < 1 || quntityRadioStation > 10) {
+        if (quntityRadioStation <1){
+            return;
+        }
+        if (quntityRadioStation > 1 || quntityRadioStation < 10) {
             this.quntityRadioStation = quntityRadioStation;
         }
     }
@@ -55,10 +59,9 @@ public class Radio {
         if (currentRadioStation > 9) {
             return;
         }
-        if (currentRadioStation > 0 || currentRadioStation < 9) {
+        if (currentRadioStation >0 || currentRadioStation <9){
             this.currentRadioStation = currentRadioStation;
         }
-
     }
 
     public void setCurrentVolume(int currentVolume) {
@@ -88,7 +91,5 @@ public class Radio {
         }
     }
 }
-
-
 
 
